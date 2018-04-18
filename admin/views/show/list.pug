@@ -1,0 +1,30 @@
+extends ../layout
+block append js
+  script(src='/js/table.js')
+block content
+  .container
+    +tableHeader('Show','/show/create','Create Entry')
+    +alerts()
+    form(method='post', role='form')
+      table.table.table-striped
+        tr
+          th
+            input#toggle(type='checkbox')
+          th Venue
+          th Date
+          th Time
+          th Active
+        each row,i in list
+          tr
+            td
+              input(type='checkbox', name='remove[]', value=row.id)
+            td
+              a(href='/show/edit?id=' + row.id)=row.venue
+            td=moment(row.time,'hh:mm').format('hh:mm A')
+            td=new Date(row.date).toDateString()
+            td
+              if(row.active)
+                span.glyphicon.glyphicon-check
+              else
+                span.glyphicon.glyphicon-remove
+      +tableFooter(page,count)

@@ -1,0 +1,9 @@
+html
+  head
+    title Preview of #{blog.title}
+    link(rel='stylesheet', type='text/css', href='//bowercdn.net/c/highlightjs-8.8.0/styles/github.css')
+    link(rel='stylesheet', type='text/css', href='//bowercdn.net/c/github-markdown-css-2.0.10/github-markdown.css')
+  body
+    article.markdown-body
+      h1=blog.title
+      | !{blog.html}

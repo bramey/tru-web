@@ -1,0 +1,40 @@
+mixin navbar()
+  .navbar
+    ul.nav.navbar-nav
+      li.logo
+        a(href='/')
+          span Tru
+      li
+        a(href='https://soundcloud.com/bullygang-entertainment')
+          span Music
+      li
+        a(href='/photos')
+          span Photo
+      //li
+        a(href='/videos')
+          span Videos
+      li
+        a(href='/news')
+          span News
+      //gonna need the url to replace this href
+      li
+        a(href='/merchandise')
+          span Store
+      li
+        a(href='/shows')
+          span  Shows
+      //li
+        //this is where the player will go
+          //simple player, transparent background
+      iframe(width='100', height='50', scrolling='no', frameborder='no', allow='autoplay', src='https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/76360627&color=%239f6804&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=false&visual=false')
+      li.logo.pull-right
+        a(href='/')
+          span BGE
+mixin socialMedia()
+  .social
+    .pw-widget.pw-counter-none
+      a.pw-button-facebook.pw-look-native
+      a.pw-button-twitter.pw-look-native
+      a.pw-button-googleplus.pw-look-native
+      a.pw-button-post-share
+

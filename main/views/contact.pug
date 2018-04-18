@@ -1,0 +1,44 @@
+extends layout
+append title
+  title Contact Us
+block content
+  .container-full
+    h1.heading48 Contact Us
+  #contact
+    .container
+      .blueLine
+      br
+      br
+      .row
+        .col-sm-8.form
+          form#form.form-horizontal(method='post', action='/contact/save')
+            .form-group
+              input#name.form-control(type='text', placeholder='First name*', name='name')
+            .form-group
+              input#lastName.form-control(name='lastName', type='text', placeholder='Last name*')
+            .clearfix
+            .form-group
+              input#email.form-control(name='email', type='email', placeholder='Email*')
+            .form-group
+              input#phone.form-control(type='text', placeholder='Phone Number*', name='phone')
+            .clearfix
+            .clearfix
+            .form-group
+              textarea#message.form-control(rows='7', placeholder='Message*', name='message')
+            .clearfix
+            button#send.btn.btn-contact(type='submit') Submit
+          p.notice
+        .col-sm-4.address
+          .adr
+            h4.heading24 Address
+            ul
+              li StretchFS
+              li 115 S Pikes Peak Ave
+              li Florence, CO 81226
+          .email
+            h4.heading24 E-mail Addresses
+            ul
+              li
+                | Technical support:
+                a(href='mailto:support@nullivex.com')  support@nullivex.com
+          .clearfix

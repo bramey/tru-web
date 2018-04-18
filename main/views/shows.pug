@@ -1,0 +1,25 @@
+extends layout
+block title
+  title Tru - Bully Gang Entertainment | Shows
+block content
+  +navbar()
+  .container
+    .heading48
+      | Tru Shows
+    .showEntries
+      table.table.truTable
+        tr
+          th Venue
+          th Date
+          th Time
+          th With
+          th Tickets
+        each show in showList
+          tr.shows
+            td=show.venue
+            td=moment.utc(show.date).format('MM-DD-YYYY')
+            td=moment(show.time,'hh:mm').format('hh:mm A')
+            td=show.with
+            td
+              //fix this to link href to the actual ticket link
+              a(href=show.ticketLink) Tickets

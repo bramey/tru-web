@@ -1,0 +1,9 @@
+node_modules
+.idea
+.nodemonignore
+*.log
+log/*
+/config.local.js
+/data
+/embed/public/bower_components
+/admin/public/bower_components

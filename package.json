@@ -1,0 +1,60 @@
+{
+  "author": "Nullivex <gpl@nullivex.com>",
+  "name": "tru-web",
+  "description": "Tru Website",
+  "version": "1.0.0",
+  "homepage": "https://www.tru.com/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nullivex/tru-web.git"
+  },
+  "keywords": [
+    "tru",
+    "drew",
+    "music",
+    "mp4",
+    "dates",
+    "shows",
+    "songs",
+    "new music"
+  ],
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "dependencies": {
+    "bcrypt": "^2.0.0",
+    "bluebird": "^3.5.1",
+    "body-parser": "1.18.x",
+    "cli-table": "^0.3.1",
+    "commander": "^2.15.1",
+    "compression": "^1.7.2",
+    "connect-flash": "^0.1.1",
+    "connect-redis": "^3.3.3",
+    "cookie": "^0.3.1",
+    "cookie-parser": "^1.4.3",
+    "express": "4.16.x",
+    "express-session": "^1.15.6",
+    "github-api": "^3.0.0",
+    "github-markdown-render": "^2.1.0",
+    "infant": "^1.0.0",
+    "markdown": "0.5.x",
+    "moment": "^2.22.1",
+    "morgan": "1.9.x",
+    "mysql": "^2.15.0",
+    "mysql2": "^1.5.3",
+    "nodemailer": "4.6.x",
+    "npm": "^5.8.0",
+    "object-manage": "1.0.x",
+    "parser": "^0.1.4",
+    "pretty-bytes": "^4.0.2",
+    "pug": "^2.0.3",
+    "recaptcha": "^1.2.1",
+    "request": "^2.85.0",
+    "sequelize": "^4.37.6",
+    "string": "^3.3.3",
+    "validator": "^9.4.1"
+  },
+  "scripts": {
+    "start": "node app"
+  }
+}

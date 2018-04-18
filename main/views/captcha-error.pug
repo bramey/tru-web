@@ -1,0 +1,10 @@
+extends layout
+append title
+  title Contact Us
+block content
+  #contactBanner.container-full
+    .container
+      h1.heading48 Oops! The Wrong Captcha Answer Was Submitted!
+      h1.heading48 You can try again or email us directly at
+        a(href='mailto:#{email}')  #{email}
+

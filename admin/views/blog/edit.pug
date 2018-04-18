@@ -1,0 +1,49 @@
+extends ../layout
+append css
+  link(rel='stylesheet', type='text/css', href='//bowercdn.net/c/github-markdown-css-2.0.10/github-markdown.css')
+block content
+  .container
+    h1 Update Entry
+    +alerts()
+    form.form-horizontal(action='/blog/save', method='post', role='form')
+      input(type='hidden', name='id', value=blog.id)
+      .form-group
+        label.control-label.col-sm-2 Title
+        .col-sm-10
+          input.form-control(type='text', name='title', placeholder='Blog Title', value=blog.title)
+      .form-group
+        label.control-label.col-sm-2 URI
+        .col-sm-10
+          input.form-control(type='text', name='uri', placeholder='Blog URI', value=blog.uri)
+      .form-group
+        label.control-label.col-sm-2 Author
+        .col-sm-10
+          input.form-control(type='text', name='author', placeholder='Blog Author Name', value=blog.author)
+      .form-group
+        label.control-label.col-sm-2 Author Website
+        .col-sm-10
+          input.form-control(type='text', name='authorUrl', placeholder='Blog Author Website', value=blog.authorUrl)
+      .form-group
+        label.control-label.col-sm-2 Cover Photo URL
+        .col-sm-10
+          input.form-control(type='text', name='coverPhotoUrl', placeholder='Blog Cover Photo', value=blog.coverPhotoUrl)
+      .form-group
+        label.control-label.col-sm-2 Description
+        .col-sm-10
+          textarea.form-control(rows='10', name='description')= blog.description
+      .form-group
+        label.control-label.col-sm-2 Markdown
+        .col-sm-10
+          textarea.form-control(rows='15', name='content')= blog.content
+      .form-group
+        label.control-label.col-sm-2 Preview
+        .col-sm-10
+          div Save to refresh preview (see full preview <a href='/blog/preview?id=' + blog.id + ' target='_blank'>here</a>)
+          iframe(src='/blog/preview?id=' + blog.id, style='width: 950px; height: 400px;')
+      .form-group
+        label.control-label.col-sm-2 Active
+        .col-sm-10
+          input(type='checkbox', name='active', checked=blog.active)
+      .form-group
+        .col-sm-offset-2.col-sm-10
+          button.btn.btn-success(type='submit') Save

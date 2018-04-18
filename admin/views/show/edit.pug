@@ -1,0 +1,40 @@
+extends ../layout
+block content
+  .container
+    h1 Update Show
+    +alerts()
+    form.form-horizontal(action='/show/save', method='post', role='form')
+      input(type='hidden', name='id', value=show.id)
+      .form-group
+        label.control-label.col-sm-2 Venue / Event
+        .col-sm-10
+          input.form-control(type='venue', name='venue', placeholder='Venue/Event', value=show.venue)
+      .form-group
+        label.control-label.col-sm-2 Date
+        .col-sm-10
+          input.form-control(type='text', name='date', placeholder='Date', value=moment.utc(show.date).format('MM-DD-YYYY'))
+          span.help-block Date format: mm-dd-yyyy
+      .form-group
+        label.control-label.col-sm-2 Time
+        .col-sm-10
+          input.form-control(type='text', name='time', placeholder='Time', value=moment(show.time,'hh:mm').format('hh:mm A'))
+          span.help-block Time format: hh:mm A (example: 7:30 PM)
+      .form-group
+        label.control-label.col-sm-2 Location
+        .col-sm-10
+          input.form-control(type='text', name='location', placeholder='Location', value=show.location)
+      .form-group
+        label.control-label.col-sm-2 With
+        .col-sm-10
+          input.form-control(type='text', name='with', placeholder='Also Performing', value=show.with)
+      .form-group
+        label.control-label.col-sm-2 Ticket Link
+        .col-sm-10
+          input.form-control(type='text', name='ticketLink', placeholder='Ticket Link', value=show.ticketLink)
+      .form-group
+        label.control-label.col-sm-2 Active
+        .col-sm-10
+          input(type='checkbox', name='active', checked=show.active)
+      .form-group
+        .col-sm-offset-2.col-sm-10
+          button.btn.btn-success(type='submit') Save
