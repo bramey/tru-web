@@ -86,6 +86,9 @@ app.get('/shows',routes.show.index)
 //photo page
 app.get('/photos',routes.photo.index)
 
+//music page
+app.get('/music',routes.music.index)
+
 //blog
 app.get('/blog',function(req,res){
   res.redirect(301,'/blog/list')

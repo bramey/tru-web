@@ -57,3 +57,12 @@ exports.show = require('./show')
  * @param {object} res
  */
 exports.photo = require('./photo')
+
+
+
+/**
+ * Music
+ * @param {object} req
+ * @param {object} res
+ */
+exports.music = require('./music')

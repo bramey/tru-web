@@ -295,3 +295,7 @@ table.truTable tr th{
   width: 100%;
   height: 500px;
 }
+
+.soundCloud iframe{
+  min-height: 950px;
+}
