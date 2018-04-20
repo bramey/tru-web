@@ -143,6 +143,7 @@ a.truBtn:hover {
 li.logo {
   font-weight: bolder;
   width: 100px;
+  text-align: center;
 }
 
 .truImage {
@@ -298,4 +299,22 @@ table.truTable tr th{
 
 .soundCloud iframe{
   min-height: 950px;
+}
+
+.fa-facebook {
+  font-size: 22px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+  background: transparent;
+  color: #FAFAFA;
+}
+
+.fa-facebook:hover {
+  background-color: transparent;
+}
+
+.fa-facebook-f:hover, .fa-facebook:hover {
+  background-color: transparent;
+  color: #FAFAFA;
 }
