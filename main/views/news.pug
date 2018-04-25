@@ -11,7 +11,7 @@ block content
     each row in newsList
       .col-md-3
         .newsBox
-          a.newsButton.open-News(data-toggle='modal',data-id=row.id)
+          a.newsButton.open-News(data-toggle='modal', data-id=row.id)
             .title=row.title
             .date= moment(row.datePosted).format("dddd, MMMM Do YYYY")
   #newsModal.modal(tabindex='-1', role='dialog', aria-labelledby='newsModalLabel', aria-hidden='true')

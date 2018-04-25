@@ -2,29 +2,20 @@ extends layout
 block title
   title Tru - Bully Gang Entertainment | Photos
 append js
-  //script(src='/js/pics.js')
+  script(src='/js/photo.js')
 block content
   +navbar()
-  .container
+  .photoContainer
     div(style='margin-bottom: 25px;')
       .heading48
         | Tru Photos
       each pic in picList
-        .col-md-3
-          .photoBox
-            img.truPhoto(src=pic)
-  //#newsModal.modal(tabindex='-1', role='dialog', aria-labelledby='newsModalLabel', aria-hidden='true')
+        .photoBox
+          img.truPhoto(src=pic, data-toggle='modal')
+  #photoModal.modal(role='dialog', aria-labelledby='photoModalLabel', aria-hidden='true')
     .modal-dialog.modal-lg
-      .modal-content.truModal
-        input.hidden#newsId(type='hidden', name='newsId')
-        form.form-horizontal
-          button.close(type='button', data-dismiss='modal', aria-hidden='true')
-          .form-group.truArea
-            textarea.truNewsTitle#newsTitle(name='title', disabled='true')
-            .div
-              textarea.truMessage#newsContent(name='content',rows='10', disabled='true')
-            //.newsImage
-              img.truImage(align='middle')#newsImage
-            textarea.newsPosted#newsPostedDate
-          .modal-footer(style='margin-bottom: -10px')
-            button.btn.truFBtn(type='button',data-dismiss='modal') Close
+      .modal-content.picModal
+        .modal-body
+          img.img-responsive(src='')
+        .modal-footer
+          button.btn.truPicBtn(type='button', data-dismiss='modal') Close

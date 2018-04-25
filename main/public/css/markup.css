@@ -1,3 +1,10 @@
+.photoContainer {
+  padding-right: 22px;
+  padding-left: 22px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
 .heading20 {
   font-size:18px;
 }
@@ -230,6 +237,11 @@ a.newsButton .date{
   background-color: hsla(00, 0%, 0%, 0.9);
 }
 
+.modal-content.picModal {
+  border: 7px double;
+  background-color: hsla(00, 0%, 0%, 0.9);
+}
+
 .modal-footer{
   text-align: center;
   border: none;
@@ -287,14 +299,16 @@ table.truTable tr th{
 }
 
 .truPhoto {
-  max-width: 275px;
-  min-height: 450px;
-  position: relative;
+  max-width:100%;
+  max-height:100%;
+  object-fit: contain;
 }
 
 .photoBox {
-  width: 100%;
-  height: 500px;
+  height: 350px;
+  width: 400px;
+  display: inline-block;
+  float: left;
 }
 
 .soundCloud iframe{
@@ -317,4 +331,21 @@ table.truTable tr th{
 .fa-facebook-f:hover, .fa-facebook:hover {
   background-color: transparent;
   color: #FAFAFA;
+}
+
+#photoModal.modal {
+  padding-top: 75px;
+  background-color: rgba(0,0,0,0.9);
+}
+
+.truPicBtn{
+  background-color: transparent;
+  color: #FAFAFA;
+  border: none;
+  font-size: 20px;
+}
+
+.truPicBtn:hover{
+  color: #000000;
+  background-color: #9F6804;
 }
