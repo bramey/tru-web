@@ -7,3 +7,5 @@ log/*
 /data
 /embed/public/bower_components
 /admin/public/bower_components
+/dt
+/dt.json
