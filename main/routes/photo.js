@@ -19,7 +19,8 @@ var picList = [
   '../images/Tru-18.jpg',
   '../images/Tru-19.jpg',
   '../images/Tru-20.jpg',
-  '../images/Tru-21.jpg'
+  '../images/Tru-21.jpg',
+  '../images/TruShow.jpg'
 ]
 
 

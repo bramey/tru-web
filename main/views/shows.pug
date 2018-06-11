@@ -1,6 +1,8 @@
 extends layout
 block title
   title Tru - Bully Gang Entertainment | Shows
+append js
+  script(src='/js/show.js')
 block content
   +navbar()
   .container
@@ -14,6 +16,12 @@ block content
           th Time
           th With
           th Tickets
+        tr.shows
+          td.poster(src='./images/TruShow.jpg', data-toggle='modal') Union Station
+          td 6-29-2018
+          td 7:00 PM
+          td Lord Young Wavvy
+          td $12 Presale $15 Day Of
         each show in showList
           tr.shows
             td=show.venue
@@ -23,3 +31,10 @@ block content
             td
               //fix this to link href to the actual ticket link
               a(href=show.ticketLink) Tickets
+  #showModal.modal(role='dialog', aria-labelledby='photoModalLabel', aria-hidden='true')
+    .modal-dialog.modal-lg
+      .modal-content.picModal
+        .modal-body
+          img.img-responsive(src='')
+        .modal-footer
+          button.btn.truPicBtn(type='button', data-dismiss='modal') Close
