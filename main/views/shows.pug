@@ -17,6 +17,13 @@ block content
           th With
           th Tickets
         tr.shows
+          td.poster(src='./images/TruShow2.jpeg', data-toggle='modal') Black Sheep
+          td 8-04-2018
+          td 7:00 PM
+          td Jarren Benton, Kato on the Track, Falli & Kanipshin
+          td
+            a(href='https://www.ticketfly.com/purchase/event/1725245?_ga=2.187258607.659658757.1532125277-429197393.1532125276&__utma=1.1145774044.1532125276.1532125276.1532125276.1&__utmb=1.2.10.1532125276&__utmc=1&__utmx=-&__utmz=1.1532125276.1.1.utmcsr=google|utmccn=(organic)|utmcmd=organic|utmctr=(not%20provided)&__utmv=-&__utmk=222917531') Here
+        tr.shows
           td.poster(src='./images/TruShow.jpg', data-toggle='modal') Union Station
           td 6-29-2018
           td 7:00 PM
@@ -31,7 +38,7 @@ block content
             td
               //fix this to link href to the actual ticket link
               a(href=show.ticketLink) Tickets
-  #showModal.modal(role='dialog', aria-labelledby='photoModalLabel', aria-hidden='true')
+  #showModal.modal(role='dialog', aria-labelledby='showModalLabel', aria-hidden='true')
     .modal-dialog.modal-lg
       .modal-content.picModal
         .modal-body
